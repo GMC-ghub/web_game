@@ -1,0 +1,77 @@
+$def with (room)
+
+<h1 class="theme"> $room.name</h1>
+$if room.name == "Central Corridor":
+	<div align="center">
+	<img boder="0" src="file:///Users/gaofangfang/t1.png" alt="Pulpit rock" width="300" height="300" >
+	</div>
+$if room.name == "Laser weapon armory":
+	<div align="center">
+	<img boder="0" src="file:///Users/gaofangfang/t1.png" alt="Pulpit rock" width="300" height="300">
+	</div>
+$if room.name == "the bridge":
+	<div align="center">
+	<img boder="0" src="file:///Users/gaofangfang/t1.png" alt="Pulpit rock" width="300" height="300">
+	</div>
+$if room.name == "escape pod":
+	<div align="center">
+	<img boder="0" src="file:///Users/gaofangfang/t1.png" alt="Pulpit rock" width="300" height="300">
+	</div>    
+$if room.name == "wrong code":
+	<div align="center">
+	<img boder="0" src="file:///Users/gaofangfang/t1.png" alt="Pulpit rock" width="300" height="300">
+	</div>
+	
+<pre class="hp">
+$room.description
+</pre>
+
+$if room.name == "death":
+	<p> <a href="/">Play Again?</a></p>
+	
+
+$if room.name == "Central Corridor":
+	<p>
+	<form action="/game" method="POST">
+	<div align="center">
+	<span> Your choice:</span> <input type="text" name="action" >		
+	<input type="SUBMIT" >		
+    <button class="button" type="button" onclick="alert('1:shoot \n2:dodge \n3:tell a joke')" >Tips! </button>
+	</div>
+	</form>
+	</p>
+$if room.name == "Laser weapon armory":
+	<p>
+	<form action="/game" method="POST">
+	<div align="center">
+	<span> Your choice:</span> <input type="text" name="action" >		
+	<input type="SUBMIT" >		
+	<button class="button" type="button" onclick="alert('1:123 \n2:425 \n3:132')" >Tips! </button>
+	</div>
+	</form>
+	</p>
+$if room.name == "the bridge":
+	<p>
+	<form action="/game" method="POST">
+	<div align="center">
+	<span> Your choice:</span> <input type="text" name="action" >		
+	<input type="SUBMIT" >		
+	<button class="button" type="button" onclick="alert('1:throw the bomb \n2:slowly place the bomb')" >Tips! </button>
+	</div>
+	</form>
+	</p>
+$if room.name == "escape pod":
+	<p>
+	<form action="/game" method="POST">
+	<div align="center">
+	<span> Your choice:</span> <input type="text" name="action" >		
+	<input type="SUBMIT" >		
+	<button class="button" type="button" onclick="alert('trust yourself!')" >Tips! </button>
+	</div>
+	</form>
+	</p>
+$if room.name == "wrong code":
+	<div align="center">
+	<p>	<a href="/count">try again? </a></p><br>	
+	<p><a href="/">Play from the start?</a>	</p>
+	</div>
